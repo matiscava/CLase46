@@ -4,7 +4,10 @@ import React from "https://dev.jspm.io/react/index.js";
 import ReactDOMServer from "https://dev.jspm.io/react-dom/server.js";
 import { createApp } from 'https://deno.land/x/servest@v1.3.4/mod.ts';
 
+
+
 const app = createApp();
+// deno-lint-ignore no-inferrable-types
 let visits:number = 0;
 
 app.handle('/',async (req) => {
@@ -22,11 +25,11 @@ app.handle('/',async (req) => {
                 <body>
                     <h1 style={{color: 'blue'}}>Hello Servest con React!</h1>
                     <h2 style={{color: 'brown'}}>Visitas: {++visits}</h2>
-                    <h3 style={{color: 'purple'}}>FyH: {new Date().toLocaleTimeString()}</h3>
+                    <h3 style={{color: 'purple'}}>FyH: {new Date().toLocaleString()}</h3>
 
                 </body>
             </html>
         ),
     })
 })
-app.listen({port: 8899})
+app.listen({port: 8080})

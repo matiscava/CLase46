@@ -12,4 +12,4 @@ app.handle("/", async (req) => {
     })
 })
 
-app.listen({ port: 8088 })
+app.listen({ port: 3000 })
